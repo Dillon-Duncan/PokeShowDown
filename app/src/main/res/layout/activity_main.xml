@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linLayoutBattle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="80dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:id="@+id/tblRowRed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#E30915">
+
+            <TableRow
+                android:id="@+id/tblRowRedBack"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnRedNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#E30915"
+                    android:contentDescription="@string/app_name"
+                    android:rotation="180"
+                    android:textSize="50sp"
+                    app:icon="@android:drawable/ic_media_next" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tblRowRedCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/linLayoutRowRedCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3">
+
+                        <TableRow
+                            android:id="@+id/tblRowRedCardDef"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:rotation="180">
+
+                            <TextView
+                                android:id="@+id/txtViewRedDef"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textSize="25sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tblRowRedCardAtt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border"
+                            android:rotation="180">
+
+                            <TextView
+                                android:id="@+id/txtViewRedAtt"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textSize="25sp" />
+                        </TableRow>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tblRowRedCardImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/imgRedPokemon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:rotation="180"
+                            android:src="@drawable/border" />
+                    </TableRow>
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tblRowRedNext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnRedBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#E30915"
+                    android:contentDescription="@string/app_name"
+                    android:textSize="50sp"
+                    app:icon="@android:drawable/ic_media_next" />
+            </TableRow>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tblRowScore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <TableRow
+                android:id="@+id/tblRowScoreBlue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#2196F3">
+
+                <TextView
+                    android:id="@+id/txtViewBlueScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="34sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tblRowScoreRed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:animationCache="true"
+                android:background="#E30915">
+
+                <TextView
+                    android:id="@+id/txtViewRedScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="34sp" />
+            </TableRow>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tblRowBlue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#2196F3">
+
+            <TableRow
+                android:id="@+id/tblRowBlueBack"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnBlueBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#2196F3"
+                    android:contentDescription="@string/app_name"
+                    app:icon="@android:drawable/ic_media_previous" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tblRowBlueCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/linLayoutRowBlueCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TableRow
+                        android:id="@+id/tblRowBlueCardImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/imgBluePokemon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:src="@drawable/borderblue" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3">
+
+                        <TableRow
+                            android:id="@+id/tblRowBlueCardDef"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderblue">
+
+                            <TextView
+                                android:id="@+id/txtViewBlueDef"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textSize="25sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tblRowBlueCardAtt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderblue">
+
+                            <TextView
+                                android:id="@+id/txtViewBlueAtt"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textSize="25sp" />
+                        </TableRow>
+                    </TableRow>
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tblRowBlueNext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnBlueNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#2196F3"
+                    android:contentDescription="@string/app_name"
+                    android:textSize="50sp"
+                    app:icon="@android:drawable/ic_media_next" />
+            </TableRow>
+
+        </TableRow>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRedConfirm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#E30915"
+        android:rotation="180"
+        android:text="BATTLE!"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/linLayoutBattle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBlueConfirm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#2196F3"
+        android:text="BATTLE!"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linLayoutBattle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
